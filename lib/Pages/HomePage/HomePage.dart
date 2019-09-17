@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'Widget/HomeAppBarWidget.dart';
 import 'Widget/HomeChooseItemWidget.dart';
 import 'Widget/HomeBannerWidget.dart';
+import 'Widget/HomeRecommendWidget.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -17,6 +18,7 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             HomeChooseItemWidget(),
             HomeBannerWidget(),
+            HomeRecommendWidget(),
           ],
         ),
       )
