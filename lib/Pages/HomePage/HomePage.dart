@@ -5,6 +5,10 @@ import 'Widget/HomeAppBarWidget.dart';
 import 'Widget/HomeChooseItemWidget.dart';
 import 'Widget/HomeBannerWidget.dart';
 import 'Widget/HomeRecommendWidget.dart';
+import 'Widget/HomeHotThemeWidget.dart';
+import 'Widget/HomeInformationExpressWidget.dart';
+import 'Widget/HomeActivityAreaWidget.dart';
+import 'Widget/HomeSecondHandHouseWidget.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -19,6 +23,10 @@ class HomePage extends StatelessWidget {
             HomeChooseItemWidget(),
             HomeBannerWidget(),
             HomeRecommendWidget(),
+            HomeHotThemeWidget(),
+            HomeInformationExpressWidget(),
+            HomeActivityAreaWidget(),
+            HomeSecondHandHouseWidget(),
           ],
         ),
       )
