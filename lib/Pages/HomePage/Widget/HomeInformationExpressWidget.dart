@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 //tool
-import 'package:flutter_house/tools/all_tool.dart';
+import 'package:flutter_house/tools/AllTool.dart';
 
 //资讯快递
 class HomeInformationExpressWidget extends StatelessWidget {

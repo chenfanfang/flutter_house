@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 //tool
-import 'package:flutter_house/tools/all_tool.dart';
+import 'package:flutter_house/tools/AllTool.dart';
 
 //降价急售、笋盘特惠、低价严选、今日必看
 class HomeRecommendWidget extends StatefulWidget {

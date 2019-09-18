@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 //tool
-import 'package:flutter_house/tools/all_tool.dart';
+import 'package:flutter_house/tools/AllTool.dart';
 
 //widget
 import 'PublicWidget/HomeDividingLineWidget.dart';
@@ -70,16 +70,16 @@ class HomeSecondHandHouseWidget extends StatelessWidget {
             height: fitPx(20),
           ),
           HomeDividingLineWidget(),
-          Column(
-            children: List.generate(
-              this.dataList.length,
-              (int index) {
-                return HomeHouseItemWidget(
-                  data: this.dataList[index],
-                );
-              },
-            ),
-          )
+//          Column(
+//            children: List.generate(
+//              this.dataList.length,
+//              (int index) {
+//                return HomeHouseItemWidget(
+//                  data: this.dataList[index],
+//                );
+//              },
+//            ),
+//          )
         ],
       ),
     );

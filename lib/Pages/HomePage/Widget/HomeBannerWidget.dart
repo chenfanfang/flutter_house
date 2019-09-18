@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 //tool
-import 'package:flutter_house/tools/all_tool.dart';
+import 'package:flutter_house/tools/AllTool.dart';
 
 class HomeBannerWidget extends StatefulWidget {
   @override
@@ -142,9 +142,17 @@ class _HelpFindHouseAndMyHouseWidgetState
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey),
+        border: Border.all(color: Colors.grey.withAlpha(100)),
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(fitPx(6))),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            blurRadius: 20,
+            offset: Offset(0, 2),
+            spreadRadius: -5
+          )
+        ]
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

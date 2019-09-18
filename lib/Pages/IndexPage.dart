@@ -7,7 +7,7 @@ import 'SeePage/SeePage.dart';
 import 'MyPage/MyPage.dart';
 
 //tools
-import 'package:flutter_house/tools/all_tool.dart';
+import 'package:flutter_house/tools/AllTool.dart';
 
 class IndexPage extends StatefulWidget {
   @override
