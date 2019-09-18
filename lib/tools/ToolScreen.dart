@@ -19,6 +19,8 @@ void initScreen(
     pxRatio = mediaQuery.size.width / uiWidth;
     screenWidth = mediaQuery.size.width;
     screenHeight = mediaQuery.size.height;
+
+    print('screenWidth:$screenWidth  screenHeight:$screenHeight');
   }
 }
 
