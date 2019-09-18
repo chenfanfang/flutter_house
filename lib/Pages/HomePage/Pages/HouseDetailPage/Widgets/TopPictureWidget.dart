@@ -21,10 +21,13 @@ class TopPictureWidget extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return SizedBox(
-      height: fitPx(200),
+      height: fitPx(240),
       child: Container(
 
         child: Swiper(
+          onTap: (int index) {
+            print('index:$index');
+          },
           itemCount: this.iconNameList.length,
           loop: true,
           autoplay: true,
