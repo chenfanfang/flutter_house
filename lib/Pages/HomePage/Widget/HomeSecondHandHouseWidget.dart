@@ -5,9 +5,37 @@ import 'package:flutter_house/tools/all_tool.dart';
 
 //widget
 import 'PublicWidget/HomeDividingLineWidget.dart';
+import 'PublicWidget/HomeHouseItemWidget.dart';
 
 //二手房
 class HomeSecondHandHouseWidget extends StatelessWidget {
+  final List<Map> dataList = [
+    {
+      'icon': 'images/banner为您推荐用图1.png',
+      'title': '宝安壹方城 2室2厅 北',
+      'subTitle': '宝安中心 壹方城 | 33层',
+      'flags': ['必看好房', '地铁沿线', '公交直达'],
+      'price': '242万',
+      'area': '70000元/平'
+    },
+    {
+      'icon': 'images/banner为您推荐用图1.png',
+      'title': '宝安壹方城 2室2厅 北',
+      'subTitle': '宝安中心 壹方城 | 33层',
+      'flags': ['必看好房', '地铁沿线', '公交直达'],
+      'price': '242万',
+      'area': '70000元/平'
+    },
+    {
+      'icon': 'images/banner为您推荐用图1.png',
+      'title': '宝安壹方城 2室2厅 北',
+      'subTitle': '宝安中心 壹方城 | 33层',
+      'flags': ['必看好房', '地铁沿线', '公交直达'],
+      'price': '242万',
+      'area': '70000元/平'
+    }
+  ];
+
   Widget _titleWidgetBuilder(String title) {
     return Text(
       title,
@@ -42,6 +70,16 @@ class HomeSecondHandHouseWidget extends StatelessWidget {
             height: fitPx(20),
           ),
           HomeDividingLineWidget(),
+          Column(
+            children: List.generate(
+              this.dataList.length,
+              (int index) {
+                return HomeHouseItemWidget(
+                  data: this.dataList[index],
+                );
+              },
+            ),
+          )
         ],
       ),
     );
