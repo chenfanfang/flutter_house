@@ -6,6 +6,9 @@ import 'package:flutter_house/tools/AllTool.dart';
 //widgets
 import 'Widgets/TopPictureWidget.dart';
 import 'Widgets/NavigationBarWidget.dart';
+import 'Widgets/ChooseItemBarWidget.dart';
+import 'Widgets/TitleMessageWidget.dart';
+import 'Widgets/HouseDetailMessageWidget.dart';
 
 class HouseDetailPage extends StatefulWidget {
   @override
@@ -66,9 +69,8 @@ class _HouseDetailPageState extends State<HouseDetailPage> {
                   Container(
                     child: TopPictureWidget(),
                   ),
-                  SizedBox(
-                    height: 1000,
-                  ),
+                  TitleMessageWidget(),
+                  HouseDetailMessageWidget(),
                 ],
               ),
             ),
@@ -76,6 +78,9 @@ class _HouseDetailPageState extends State<HouseDetailPage> {
           Positioned(
             //height: MediaQuery.of(context).padding.top + fitPx(44),
             child: NavigationBarWidget(this.navBgColorAlpha),
+          ),
+          Positioned(
+            child: ChooseItemBarWidget(this.navBgColorAlpha),
           ),
         ],
       ),

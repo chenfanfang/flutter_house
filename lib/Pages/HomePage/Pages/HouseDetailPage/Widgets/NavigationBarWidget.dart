@@ -22,9 +22,6 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
     Icons.send
   ];
 
-  int selectedIndex = 0;
-
-  List<String> itemTitleList = ['房源', '详情', '动态', '小区', '推荐'];
 
   Widget _customIconButtonBuilder(
       {IconData iconData, void Function() onPress}) {
@@ -43,10 +40,10 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
   Widget build(BuildContext context) {
     double marginTop = MediaQuery.of(context).padding.top;
     double navigationBarHeight = 44;
-    double chooseBarHeight = 44;
+
     return Container(
       alignment: Alignment.topCenter,
-      height: marginTop + navigationBarHeight + chooseBarHeight,
+      height: marginTop + navigationBarHeight,
       color: this.widget.bgAlpha == 0
           ? Colors.transparent
           : Colors.white.withAlpha(this.widget.bgAlpha),
@@ -84,40 +81,6 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
               ],
             ),
           ),
-
-          //分割线
-          SizedBox(
-            height: fitPx(1),
-            child: Container(
-              color: Color.fromARGB(255, 230, 230, 230).withAlpha(this.widget.bgAlpha),
-            ),
-          ),
-
-          Expanded(
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(this.itemTitleList.length, (int index) {
-                  return Container(
-                    width: screenWidth / this.itemTitleList.length - 0.01,
-                    child: FlatButton(
-                        onPressed: () {
-                          setState(() {
-                            this.selectedIndex = index;
-                          });
-                        },
-                        child: Text(
-                          this.itemTitleList[index],
-                          style: TextStyle(
-                              color: index == this.selectedIndex
-                                  ? Colors.blue.withAlpha(this.widget.bgAlpha)
-                                  : Color.fromARGB(255, 120, 120, 120).withAlpha(this.widget.bgAlpha)),
-                        )),
-                  );
-                }),
-              ),
-            ),
-          )
         ],
       ),
     );
