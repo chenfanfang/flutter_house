@@ -31,7 +31,7 @@ class _IndexPageState extends State<IndexPage> {
     BottomNavigationBarItem(
       icon: Icon(Icons.person),
       title: Text('我的'),
-    ),
+    )
   ];
 
   final List<Widget> pages = [
